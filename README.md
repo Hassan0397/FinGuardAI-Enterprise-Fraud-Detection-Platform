@@ -18,7 +18,7 @@ Unlike traditional machine learning projects that only focus on prediction accur
 | 📄 Application Pages | **9** |
 
 
-# Fraud Detection: Business Problem Statement
+# 🔴 Problem Statement
 
 Fraud detection remains one of the most challenging problems in modern financial systems. Financial institutions process millions of transactions daily, making it increasingly difficult to identify fraudulent activities accurately while maintaining a seamless customer experience.
 
