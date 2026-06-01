@@ -1,0 +1,47 @@
+{
+    "feature_columns": [
+        "transaction_hour",
+        "transaction_day_of_week",
+        "amount",
+        "transaction_type",
+        "customer_age",
+        "account_age_days",
+        "customer_region",
+        "income_level",
+        "transaction_velocity_1h",
+        "transaction_velocity_24h",
+        "avg_transaction_amount_7d",
+        "deviation_from_avg_amount",
+        "is_international",
+        "merchant_risk_score",
+        "device_type",
+        "is_new_device",
+        "previous_fraud_count",
+        "is_night_transaction",
+        "high_amount_flag"
+    ],
+    "categorical_columns": [
+        "transaction_day_of_week",
+        "transaction_type",
+        "customer_region",
+        "income_level",
+        "device_type"
+    ],
+    "numerical_columns": [
+        "transaction_hour",
+        "amount",
+        "customer_age",
+        "account_age_days",
+        "transaction_velocity_1h",
+        "transaction_velocity_24h",
+        "avg_transaction_amount_7d",
+        "deviation_from_avg_amount",
+        "is_international",
+        "merchant_risk_score",
+        "is_new_device",
+        "previous_fraud_count",
+        "is_night_transaction",
+        "high_amount_flag"
+    ],
+    "expected_shape": 19
+}
