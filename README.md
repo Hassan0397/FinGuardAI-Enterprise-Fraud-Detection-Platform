@@ -3,6 +3,7 @@ FinGuard AI is a production-grade, cost-aware fraud detection and decision intel
 
 Unlike traditional machine learning projects that only focus on prediction accuracy, FinGuard AI transforms ML predictions into actionable business decisions (Approve / Review / Block) using a cost-sensitive decision engine that optimizes financial impact instead of relying only on standard ML metrics.
 
+
 ## 🌟 Key Highlights
 
 | Metric | Value |
