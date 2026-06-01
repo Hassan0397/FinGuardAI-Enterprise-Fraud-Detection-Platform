@@ -57,6 +57,6 @@ When a legitimate transaction is incorrectly blocked:
 
 ## 🎯 The Core Problem
 
-> Traditional fraud detection systems are designed to maximize prediction accuracy.
+Traditional fraud detection systems are designed to maximize prediction accuracy.
 
 However, in real-world financial operations, the objective is not simply accuracy—it is **minimizing financial loss while maximizing business value**.
