@@ -1261,6 +1261,306 @@ More than 10 interactive charts are available.
 * Enterprise Dashboard
 * Production-Ready Architecture
 
+# 📁 Project Structure
+
+The project follows a modular and production-ready architecture designed for scalability, maintainability, and enterprise deployment.
+
+## Directory Structure
+
+```text id="t0fw4j"
+finguard-ai/
+│
+├── app.py                          # Main Streamlit application (9 pages)
+├── config.py                       # Configuration (paths, parameters, constants)
+├── requirements.txt                # Python dependencies
+├── .gitignore                      # Git ignore rules
+├── README.md                       # Project documentation
+│
+├── data/
+│   └── training/
+│       ├── fraud_detection_dataset_with_fraud_column.csv
+│       │                              # 20K records with fraud labels
+│       └── fraud_detection_dataset_without_fraud.csv
+│                                      # 20K legitimate transactions
+│
+├── models/                          # Trained ML artifacts
+│   ├── xgb_model.pkl                # XGBoost model (99.69% accuracy)
+│   ├── logistic_model.pkl           # Logistic Regression model (76.06% accuracy)
+│   ├── scaler.pkl                   # StandardScaler object
+│   ├── encoder.pkl                  # Label encoders for categorical features
+│   ├── feature_schema.json          # Expected feature schema
+│   ├── threshold_config.json        # Decision thresholds and cost settings
+│   └── data_hash.txt                # Dataset hash for drift monitoring
+│
+├── pipelines/                       # Core machine learning pipelines
+│   ├── __init__.py
+│   ├── validation.py                # DataValidator (40+ validation rules)
+│   ├── preprocessing.py             # DataPreprocessor (scaling & encoding)
+│   ├── inference.py                 # FraudInference (prediction engine)
+│   ├── training.py                  # FraudModelTrainer
+│   ├── evaluation.py                # ModelEvaluator (metrics & scoring)
+│   └── explainability.py            # FraudExplainer (SHAP integration)
+│
+├── utils/                           # Utility modules
+│   ├── __init__.py
+│   ├── cost_engine.py               # CostEngine (ROI & financial optimization)
+│   ├── drift_detection.py           # DriftDetector (PSI, KS test)
+│   ├── report_generator.py          # ReportGenerator (PDF & HTML reports)
+│   ├── helpers.py                   # Helper functions
+│   ├── ab_testing.py                # ABTestEngine (statistical testing)
+│   ├── shap_visualizer.py           # SHAP visualization engine
+│   ├── pdf_report_generator.py      # Premium PDF report generator
+│   └── workflow_guidance.py         # Workflow recommendations
+│
+├─
+│
+├── reports/                         # Generated reports
+
+
+```
+
+---
+
+# 📂 Folder Breakdown
+
+## Root Directory
+
+The root directory contains the application's entry point, configuration files, dependency management, and documentation.
+
+| File               | Purpose                                           |
+| ------------------ | ------------------------------------------------- |
+| `app.py`           | Main Streamlit application containing all 9 pages |
+| `config.py`        | Global configuration settings and constants       |
+| `requirements.txt` | Project dependencies                              |
+| `.gitignore`       | Files and folders excluded from version control   |
+| `README.md`        | Project documentation                             |
+
+---
+
+## 📊 Data Directory
+
+Stores datasets used for training and experimentation.
+
+### Training Datasets
+
+| Dataset                                         | Description                                             |
+| ----------------------------------------------- | ------------------------------------------------------- |
+| `fraud_detection_dataset_with_fraud_column.csv` | 20,000 labeled transactions containing fraud indicators |
+| `fraud_detection_dataset_without_fraud.csv`     | 20,000 legitimate transactions used for balancing       |
+
+### Purpose
+
+* Model training
+* Feature engineering
+* Performance evaluation
+* Experimentation
+
+---
+
+## 🤖 Models Directory
+
+Contains all serialized machine learning artifacts required during inference.
+
+### Stored Artifacts
+
+| File                    | Description                             |
+| ----------------------- | --------------------------------------- |
+| `xgb_model.pkl`         | Primary XGBoost fraud detection model   |
+| `logistic_model.pkl`    | Baseline Logistic Regression model      |
+| `scaler.pkl`            | Feature scaling transformer             |
+| `encoder.pkl`           | Label encoding transformer              |
+| `feature_schema.json`   | Expected feature structure              |
+| `threshold_config.json` | Business thresholds and cost parameters |
+| `data_hash.txt`         | Training dataset fingerprint            |
+
+### Purpose
+
+* Fast model loading
+* Consistent predictions
+* Version control of ML artifacts
+* Drift monitoring support
+
+---
+
+## ⚙️ Pipelines Directory
+
+Contains the core machine learning workflow components.
+
+### Modules
+
+#### validation.py
+
+**DataValidator**
+
+Responsibilities:
+
+* Schema validation
+* Missing value detection
+* Business rule validation
+* Auto-fix capabilities
+* Data quality scoring
+
+---
+
+#### preprocessing.py
+
+**DataPreprocessor**
+
+Responsibilities:
+
+* Feature scaling
+* Label encoding
+* Missing value handling
+* Feature transformation
+
+---
+
+#### inference.py
+
+**FraudInference**
+
+Responsibilities:
+
+* Model loading
+* Prediction generation
+* Risk scoring
+* Threshold evaluation
+
+---
+
+#### training.py
+
+**FraudModelTrainer**
+
+Responsibilities:
+
+* Model training
+* Hyperparameter tuning
+* Artifact generation
+* Model persistence
+
+---
+
+#### evaluation.py
+
+**ModelEvaluator**
+
+Responsibilities:
+
+* Accuracy measurement
+* Precision and recall analysis
+* ROC-AUC evaluation
+* Performance benchmarking
+
+---
+
+#### explainability.py
+
+**FraudExplainer**
+
+Responsibilities:
+
+* SHAP integration
+* Local explanations
+* Global feature importance
+* Interpretability metrics
+
+---
+
+## 🛠️ Utils Directory
+
+Contains reusable helper modules used across the platform.
+
+### Utility Components
+
+| Module                    | Responsibility                                     |
+| ------------------------- | -------------------------------------------------- |
+| `cost_engine.py`          | Financial impact calculations and ROI optimization |
+| `drift_detection.py`      | Data drift monitoring and statistical analysis     |
+| `report_generator.py`     | PDF and HTML report generation                     |
+| `helpers.py`              | Common utility functions                           |
+| `ab_testing.py`           | A/B testing framework                              |
+| `shap_visualizer.py`      | SHAP charts and visual explanations                |
+| `pdf_report_generator.py` | Premium executive-level reports                    |
+| `workflow_guidance.py`    | Intelligent workflow recommendations               |
+
+---
+
+## 📈 Dashboards Directory
+
+Reserved for future modular dashboard components.
+
+Potential additions:
+
+* Reusable widgets
+* Dashboard templates
+* KPI components
+* Chart libraries
+
+---
+
+## 📑 Reports Directory
+
+Stores generated reports and exported outputs.
+
+### Report Types
+
+#### PDF Reports
+
+* Executive summaries
+* Fraud investigation reports
+* Financial impact reports
+
+#### HTML Reports
+
+* Interactive dashboards
+* A/B testing reports
+* SHAP explainability reports
+
+#### Data Exports
+
+* CSV exports
+* JSON exports
+* Decision logs
+
+---
+
+## 🧪 Tests Directory
+
+Contains automated testing suites.
+
+### Testing Coverage
+
+* Unit tests
+* Integration tests
+* Pipeline validation tests
+* Model evaluation tests
+* UI component tests
+
+### Purpose
+
+* Ensure reliability
+* Prevent regressions
+* Validate business logic
+* Maintain production quality
+
+---
+
+# 🏗️ Architecture Principles
+
+The project structure follows enterprise software engineering best practices:
+
+* Separation of Concerns
+* Modular Design
+* Reusable Components
+* Scalable Architecture
+* Test-Driven Development Support
+* Production-Ready Deployment
+* Maintainable Codebase
+* Explainable AI Integration
+* Business-Oriented Decision Intelligence
+
+
 
 
 
