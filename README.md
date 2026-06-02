@@ -107,3 +107,113 @@ Output: `xgb_model.pkl`, `scaler.pkl`, `encoders.pkl`, `feature_schema.json`, `t
 **INFERENCE PHASE** (Runs every time user uploads data)
 
 User Upload → Validation → Preprocessing → ML Prediction → Decision Engine → SHAP Explanation → Dashboard
+
+# Hybrid Training/Inference Design
+
+## Overview
+
+This project follows a **Hybrid Training/Inference Architecture** that separates model training from prediction serving. This design improves scalability, maintainability, and production performance.
+
+---
+
+## Training Phase
+
+**Purpose:** Train the machine learning model and generate reusable artifacts.
+
+**Execution:** Runs once during initial setup or whenever the training dataset changes.
+
+### Workflow
+
+```text
+Historical Data
+      ↓
+Validation
+      ↓
+Preprocessing
+      ↓
+Model Training
+```
+
+### Output Artifacts
+
+The training pipeline generates the following files:
+
+* `xgb_model.pkl` – Trained XGBoost model
+* `scaler.pkl` – Feature scaling object
+* `encoders.pkl` – Categorical feature encoders
+* `feature_schema.json` – Feature definitions and schema validation rules
+* `threshold_config.json` – Business thresholds and decision rules
+
+---
+
+## Inference Phase
+
+**Purpose:** Generate predictions and explanations for user-uploaded data.
+
+**Execution:** Runs every time a user uploads new data.
+
+### Workflow
+
+```text
+User Upload
+      ↓
+Validation
+      ↓
+Preprocessing
+      ↓
+ML Prediction
+      ↓
+Decision Engine
+      ↓
+SHAP Explanation
+      ↓
+Dashboard
+```
+
+### Components
+
+| Component        | Description                                            |
+| ---------------- | ------------------------------------------------------ |
+| Validation       | Ensures uploaded data matches the expected schema      |
+| Preprocessing    | Applies the same transformations used during training  |
+| ML Prediction    | Generates predictions using the trained model          |
+| Decision Engine  | Applies business rules and threshold logic             |
+| SHAP Explanation | Provides model interpretability and feature importance |
+| Dashboard        | Displays predictions, insights, and explanations       |
+
+---
+
+## System Architecture
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│                      TRAINING PHASE                              │
+│  (Runs once OR when training data changes)                       │
+│                                                                  │
+│  Historical Data → Validation → Preprocessing → Model Training  │
+│                                                                  │
+│  Output: xgb_model.pkl, scaler.pkl, encoders.pkl,               │
+│          feature_schema.json, threshold_config.json              │
+└─────────────────────────────────────────────────────────────────┘
+                              ↓
+┌─────────────────────────────────────────────────────────────────┐
+│                     INFERENCE PHASE                              │
+│  (Runs every time user uploads data)                             │
+│                                                                  │
+│  User Upload → Validation → Preprocessing → ML Prediction       │
+│           ↓                                                      │
+│  Decision Engine → SHAP Explanation → Dashboard                 │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## Benefits
+
+* Separation of training and prediction workflows
+* Faster inference through reusable model artifacts
+* Consistent preprocessing across training and production
+* Explainable AI using SHAP
+* Production-ready architecture for scalable deployment
+* Easy model retraining when new historical data becomes available
+
