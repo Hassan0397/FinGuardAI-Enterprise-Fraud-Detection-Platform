@@ -540,5 +540,309 @@ A modern analytics dashboard built for real-time fraud monitoring and investigat
 * Production-Ready Architecture
 * Scalable and Modular Design
 
+# 📄 Pages & Modules
+
+FinGuard AI provides a complete enterprise-grade workflow through multiple specialized pages and modules, guiding users from data ingestion to fraud detection and decision-making.
+
+---
+
+# 🏠 Page 1: Home Dashboard
+
+### Purpose
+
+The Home Dashboard serves as the landing page, providing an overview of platform capabilities, performance metrics, and navigation options.
+
+### Components
+
+#### Hero Section
+
+* Clear value proposition
+* Platform overview
+* Key benefits and use cases
+
+#### Performance Metrics
+
+Four animated KPI cards displaying:
+
+| Metric            | Value      |
+| ----------------- | ---------- |
+| Accuracy          | 99.7%      |
+| Savings Generated | $1.2M      |
+| Inference Speed   | < 100 ms   |
+| Explainability    | SHAP-Based |
+
+#### Visual Workflow
+
+```text id="l5l8wn"
+Upload Data
+      ↓
+Validate Data
+      ↓
+Predict Fraud
+      ↓
+Make Decision
+      ↓
+Explain Results
+```
+
+#### Feature Showcase
+
+* Cost-Aware Decision Intelligence
+* Self-Healing Validation Engine
+* Explainable AI
+* Data Drift Monitoring
+* A/B Testing Framework
+* Professional Reporting
+
+#### Quick Actions
+
+* Start Analysis
+* View Analytics
+* Documentation
+
+### User Interaction
+
+Acts as the central navigation hub for all platform modules.
+
+---
+
+# 📤 Page 2: Data Upload Center
+
+### Purpose
+
+Allows users to ingest transaction data from multiple sources with automatic detection and validation.
+
+---
+
+## Supported Data Sources
+
+| Source       | Method         | Supported Formats     |
+| ------------ | -------------- | --------------------- |
+| Local File   | Drag & Drop    | CSV, Excel, JSON      |
+| Direct URL   | Paste Link     | CSV, Excel, JSON, ZIP |
+| GitHub       | Raw File URL   | CSV, Excel            |
+| Google Drive | Shareable Link | Any Supported Format  |
+| Kaggle       | Dataset Path   | CSV                   |
+
+---
+
+## Features
+
+### Automatic Format Detection
+
+* Detects file type automatically
+* Validates file structure
+
+### Data Preview
+
+* Displays first 10 records
+* Interactive table preview
+
+### Schema Analysis
+
+* Column names
+* Data types
+* Null counts
+* Unique value counts
+
+### Statistical Summary
+
+For numeric features:
+
+* Mean
+* Median
+* Standard Deviation
+* Minimum
+* Maximum
+
+### File Statistics
+
+* Total rows
+* Total columns
+* Memory usage
+* File size
+
+### Troubleshooting Assistance
+
+* Data quality suggestions
+* Import error guidance
+* Format recommendations
+
+---
+
+# 🔍 Page 3: Data Validation Engine
+
+### Purpose
+
+Ensures data quality, consistency, and readiness before fraud detection.
+
+---
+
+## Validation Checks
+
+More than 40 validation rules are executed automatically.
+
+| Check Type                | Validation                             |
+| ------------------------- | -------------------------------------- |
+| Schema Validation         | Required columns exist                 |
+| Data Type Validation      | Numeric, categorical, and date formats |
+| Missing Values            | Detects incomplete records             |
+| Duplicate Detection       | Duplicate transaction IDs              |
+| Outlier Detection         | Statistical anomalies (3× IQR)         |
+| Business Logic Validation | Rule-based fraud indicators            |
+| Cross-Column Validation   | Derived feature consistency            |
+
+---
+
+## Intelligent Column Mapping
+
+Automatically maps user-provided columns to the expected schema.
+
+| User Column        | Expected Feature    | Auto-Mapped |
+| ------------------ | ------------------- | ----------- |
+| transaction_amount | amount              | ✅ Yes       |
+| country            | customer_region     | ✅ Yes       |
+| txn_time           | transaction_hour    | ✅ Yes       |
+| risk               | merchant_risk_score | ✅ Yes       |
+
+---
+
+## Auto-Fix Capabilities
+
+The validation engine automatically resolves common data issues.
+
+| Issue Detected                | Automatic Fix                               |
+| ----------------------------- | ------------------------------------------- |
+| Missing Transaction IDs       | Generate unique IDs (`TXN_YYYYMMDD_XXXXXX`) |
+| Negative Amounts              | Set minimum amount to $1.00                 |
+| Risk Score > 1                | Clip to 1.0                                 |
+| Risk Score < 0                | Clip to 0.0                                 |
+| Night Transaction Not Flagged | Derive from transaction hour                |
+| High Amount Not Flagged       | Derive flag for amounts > $1000             |
+
+---
+
+## Validation Output
+
+### Data Quality Score
+
+* Score range: 0–100%
+* Overall quality assessment
+
+### Visualizations
+
+* Gauge chart
+* Validation summary charts
+
+### Reports
+
+* Detailed issue report
+* Auto-fix log
+* Improvement recommendations
+
+---
+
+# 🤖 Page 4: Fraud Detection Engine
+
+### Purpose
+
+Applies machine learning models to predict fraudulent transactions in real time.
+
+---
+
+## Available Models
+
+### XGBoost (Primary Model)
+
+| Metric          | Value            |
+| --------------- | ---------------- |
+| Accuracy        | 99.69%           |
+| Inference Speed | 45 ms            |
+| Usage           | Production Model |
+
+### Logistic Regression (Baseline Model)
+
+| Metric          | Value                |
+| --------------- | -------------------- |
+| Accuracy        | 76.06%               |
+| Inference Speed | 12 ms                |
+| Usage           | Benchmark Comparison |
+
+---
+
+## Detection Pipeline
+
+```text id="0ep3s4"
+Load Trained Models
+         ↓
+Preprocess Data
+         ↓
+Scale Features
+         ↓
+Encode Categories
+         ↓
+Handle Missing Values
+         ↓
+Run Inference
+         ↓
+Generate Fraud Probability
+         ↓
+Assign Risk Level
+```
+
+---
+
+## Risk Classification
+
+| Risk Level  | Probability Range |
+| ----------- | ----------------- |
+| Low Risk    | 0.00 – 0.44       |
+| Medium Risk | 0.45 – 0.84       |
+| High Risk   | 0.85 – 1.00       |
+
+---
+
+## Visualizations
+
+### Risk Distribution
+
+* Pie chart showing risk categories
+
+### Fraud Probability Distribution
+
+* Histogram of fraud probabilities
+
+### Threshold Indicators
+
+* Decision thresholds at:
+
+  * 0.44
+  * 0.84
+
+### Summary Metrics
+
+* Mean fraud probability
+* Risk concentration indicators
+
+---
+
+## Detection Output
+
+Each transaction prediction includes:
+
+* Transaction ID
+* Fraud Probability
+* Risk Level
+* Prediction Timestamp
+* Model Decision
+* Confidence Score
+
+---
+
+### Outcome
+
+The Fraud Detection Engine transforms validated transaction data into actionable fraud risk assessments, enabling rapid and explainable business decisions.
+
+
 
 
