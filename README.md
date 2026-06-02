@@ -217,3 +217,113 @@ Dashboard
 * Production-ready architecture for scalable deployment
 * Easy model retraining when new historical data becomes available
 
+# Why This Design is Superior
+
+Compared to traditional machine learning deployment approaches, **FinGuard AI's Hybrid Architecture** provides significant advantages in performance, scalability, and production readiness.
+
+| Aspect                   | Traditional Approach         | FinGuard AI Hybrid             |
+| ------------------------ | ---------------------------- | ------------------------------ |
+| **Speed**                | Retrains every time (slow)   | Loads trained models instantly |
+| **Consistency**          | Results may vary across runs | Same input = same output       |
+| **Resource Usage**       | High computational cost      | Optimized and efficient        |
+| **Production Readiness** | Not suitable for deployment  | Enterprise-grade architecture  |
+
+---
+
+# 🏗️ System Architecture
+
+## High-Level Architecture Diagram
+
+```text
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                           FRONTEND (Streamlit)                              │
+│                                                                             │
+│  ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐    │
+│  │  Home   │ │ Upload  │ │Validate │ │ Detect  │ │ Decision│ │  SHAP   │    │
+│  └─────────┘ └─────────┘ └─────────┘ └─────────┘ └─────────┘ └─────────┘    │
+│                                                                             │
+│  ┌─────────┐ ┌─────────┐ ┌─────────┐                                        │
+│  │  Drift  │ │ A/B Test│ │Analytics│                                        │
+│  └─────────┘ └─────────┘ └─────────┘                                        │
+└─────────────────────────────────────────────────────────────────────────────┘
+                                    ↓
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                          BACKEND (Python)                                   │
+│                                                                             │
+│  ┌─────────────────────────────────────────────────────────────────────┐    │
+│  │                        PIPELINES MODULE                             │    │
+│  │                                                                     │    │
+│  │  ┌──────────┐ ┌─────────────┐ ┌──────────┐ ┌──────────┐ ┌─────────┐ │    │
+│  │  │Validation│ │Preprocessing│ │Inference │ │ Training │ │Explain  │ │    │
+│  │  └──────────┘ └─────────────┘ └──────────┘ └──────────┘ └─────────┘ │    │
+│  └─────────────────────────────────────────────────────────────────────┘    │
+│                                                                             │
+│  ┌─────────────────────────────────────────────────────────────────────┐    │
+│  │                         UTILS MODULE                               │    │
+│  │                                                                     │    │
+│  │  ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐   │    │
+│  │  │CostEngine│ │  Drift   │ │  Report  │ │ABTesting │ │ SHAP Viz │   │    │
+│  │  └──────────┘ └──────────┘ └──────────┘ └──────────┘ └──────────┘   │    │
+│  └─────────────────────────────────────────────────────────────────────┘    │
+└─────────────────────────────────────────────────────────────────────────────┘
+                                    ↓
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                          ML MODELS & DATA                                  │
+│                                                                             │
+│  ┌──────────────────┐  ┌────────────────────┐  ┌─────────────────────────┐ │
+│  │  XGBoost Model   │  │ Logistic Regression │  │   Training Data (40K)   │ │
+│  │    (Primary)     │  │     (Baseline)      │  │                         │ │
+│  │  • 99.69% Acc    │  │   • 76.06% Acc      │  │ • 20K Fraud Records     │ │
+│  └──────────────────┘  └────────────────────┘  │ • 20K Legitimate Records│ │
+│                                                  └─────────────────────────┘ │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+# Data Flow
+
+The end-to-end prediction workflow follows the sequence below:
+
+```text
+User Uploads Data
+       ↓
+[Validation Engine]
+       ↓
+Auto-fixes issues and maps columns
+       ↓
+[Preprocessing]
+       ↓
+Scales, encodes, and handles missing values
+       ↓
+[ML Inference]
+       ↓
+XGBoost predicts fraud probability
+       ↓
+[Decision Engine]
+       ↓
+Cost-optimized Approve / Review / Block decision
+       ↓
+[SHAP Explainer]
+       ↓
+Explains why each decision was made
+       ↓
+[Dashboard]
+       ↓
+Visualize results and generate reports
+```
+
+---
+
+# Key Architecture Benefits
+
+* **Fast Predictions** through pre-trained model loading.
+* **Consistent Results** with standardized preprocessing pipelines.
+* **Explainable AI** using SHAP-based feature importance analysis.
+* **Cost-Aware Decision Engine** for optimized fraud management.
+* **Data Drift Monitoring** to detect performance degradation.
+* **A/B Testing Framework** for safe model experimentation.
+* **Enterprise-Ready Design** suitable for real-world deployment.
+* **Modular Architecture** enabling easy maintenance and future enhancements.
+
+
