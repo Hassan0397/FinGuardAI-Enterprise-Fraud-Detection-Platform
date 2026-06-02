@@ -2312,7 +2312,7 @@ Integrated monitoring, validation, and decision intelligence features
 
 **Email hassansubhani822@gmail.com**
 
-For feedback, suggestions, collaboration opportunities, or project discussions, please connect through your preferred professional channels.
+For to get this project, suggestions, collaboration opportunities, or project discussions, please connect through your preferred professional channels.
 
 
 
