@@ -842,6 +842,426 @@ Each transaction prediction includes:
 
 The Fraud Detection Engine transforms validated transaction data into actionable fraud risk assessments, enabling rapid and explainable business decisions.
 
+# ⚖️ Page 5: Decision Intelligence
+
+## Purpose
+
+Transform machine learning predictions into actionable business decisions while optimizing financial outcomes.
+
+---
+
+## Cost-Aware Decision Model
+
+The platform evaluates decisions based on their real-world financial impact.
+
+| Error Type                    | Cost   | Business Impact                  |
+| ----------------------------- | ------ | -------------------------------- |
+| False Negative (Missed Fraud) | $1,000 | Fraud losses, chargebacks        |
+| False Positive (Wrong Block)  | $50    | Customer friction, support costs |
+| Manual Review                 | $10    | Analyst review time              |
+
+---
+
+## Decision Rules
+
+| Fraud Probability | Decision  | Business Action                   |
+| ----------------- | --------- | --------------------------------- |
+| 0.00 – 0.44       | ✅ Approve | Auto-approve transaction          |
+| 0.45 – 0.84       | ⚠️ Review | Send for manual review            |
+| 0.85 – 1.00       | ❌ Block   | Auto-reject and notify fraud team |
+
+---
+
+## Financial Analysis
+
+### Metrics Generated
+
+* Potential Fraud Loss Prevented
+* Net Savings
+* Operational Costs
+* Return on Investment (ROI)
+* Savings per Blocked Transaction
+* Fraud Prevention Efficiency
+
+---
+
+## User Controls
+
+### Interactive Controls
+
+* Adjustable decision thresholds
+* Threshold sliders
+* Scenario analysis
+* Impact preview before applying changes
+
+### Export Options
+
+* CSV export of decisions
+* Risk assessment reports
+* Decision audit logs
+
+---
+
+## Report Generation
+
+Professional executive reports including:
+
+* Financial impact analysis
+* Cost-benefit assessment
+* ROI calculations
+* Strategic recommendations
+* Executive summary
+
+**Report Footer**
+
+```text id="u3v6fu"
+Built by Hassan Subhani
+```
+
+---
+
+# 🧠 Page 6: Explainable AI (SHAP)
+
+## Purpose
+
+Provide transparent explanations for every fraud prediction made by the machine learning model.
+
+---
+
+## Real SHAP Integration
+
+FinGuard AI uses actual SHAP calculations rather than simulated explanations.
+
+### Features
+
+* SHAP TreeExplainer
+* XGBoost model explanations
+* Local and global interpretability
+* Transaction-level analysis
+
+---
+
+## SHAP Visualizations
+
+| Visualization      | Purpose                                                 |
+| ------------------ | ------------------------------------------------------- |
+| Waterfall Plot     | Shows feature contributions from baseline to prediction |
+| 3D Force Plot      | Interactive feature impact visualization                |
+| Feature Importance | Ranked SHAP values                                      |
+| Radar Chart        | Multi-dimensional risk comparison                       |
+| Confidence Gauge   | Model confidence score                                  |
+
+---
+
+## Natural Language Explanation Example
+
+```text id="t8b5zf"
+🔴 CRITICAL RISK ASSESSMENT: HIGH THREAT DETECTED
+
+📊 SHAP Analysis - Feature Impact Breakdown
+
+🔴 Transaction Amount increases risk by 31.2%
+🔴 Merchant Risk Score increases risk by 18.5%
+🔴 Night Transaction increases risk by 12.3%
+
+🎯 Model Confidence: 94.5%
+
+Recommendations:
+• 🚨 URGENT: Block transaction immediately
+• 🔒 Account Protection: Temporarily restrict account
+• 📞 Customer Verification: Attempt immediate contact
+```
+
+---
+
+## Export Options
+
+* Premium PDF reports
+* Interactive HTML reports
+* JSON export
+* Executive summaries
+* Audit-ready documentation
+
+---
+
+# 📉 Page 7: Drift Monitor
+
+## Purpose
+
+Monitor changes in fraud behavior and detect when model performance may be degrading.
+
+---
+
+## Why Drift Monitoring Matters
+
+Fraud patterns continuously evolve. A model trained on historical data may become less effective as attacker behavior changes over time.
+
+---
+
+## Drift Detection Methods
+
+### Statistical Monitoring
+
+* Population Stability Index (PSI)
+* Kolmogorov-Smirnov (KS) Test
+* Mean Shift Analysis
+* Standard Deviation Monitoring
+* Feature Distribution Comparison
+
+---
+
+## Drift Severity Levels
+
+| Drift Score | Status     | Recommended Action        |
+| ----------- | ---------- | ------------------------- |
+| 0 – 20%     | ✅ Stable   | No action required        |
+| 20 – 50%    | ⚠️ Warning | Monitor closely           |
+| 50 – 100%   | 🔴 Severe  | Retrain model immediately |
+
+---
+
+## Monitoring Output
+
+### Dashboard Metrics
+
+* Overall Drift Score
+* Feature-Level Drift Scores
+* Percentage Change per Feature
+* Trend Analysis
+
+### Recommendations
+
+* Retraining suggestions
+* High-risk feature alerts
+* Performance optimization guidance
+
+---
+
+# 🔬 Page 8: A/B Testing Framework
+
+## Purpose
+
+Scientifically compare fraud detection models, thresholds, and strategies.
+
+---
+
+## Supported Experiments
+
+### Model Comparison
+
+* XGBoost vs Logistic Regression
+* Multiple model versions
+* Baseline vs production models
+
+### Strategy Comparison
+
+* Threshold configurations
+* Feature engineering approaches
+* Fraud decision policies
+
+---
+
+## Statistical Testing
+
+### Methods Used
+
+* Z-Test for Proportions
+* P-Value Calculation
+* Confidence Interval Analysis
+* Lift Analysis
+* Statistical Significance Testing
+
+---
+
+## Evaluation Metrics
+
+| Metric          | Weight |
+| --------------- | ------ |
+| Accuracy        | 30%    |
+| Precision       | 20%    |
+| Recall          | 20%    |
+| F1 Score        | 20%    |
+| Inference Speed | 10%    |
+
+---
+
+## Winner Selection
+
+The framework calculates a weighted composite score and validates statistical significance before declaring a winning strategy.
+
+### Output
+
+* Winning model
+* Performance lift
+* Confidence level
+* Statistical significance validation
+
+---
+
+## Reports
+
+* Interactive HTML reports
+* Professional PDF reports
+* Summary statistics
+* Performance comparisons
+
+---
+
+# 📊 Page 9: Analytics Dashboard
+
+## Purpose
+
+Provide executive-level business intelligence and fraud analytics.
+
+---
+
+## Key Performance Indicators (KPIs)
+
+### Business Metrics
+
+* Fraud Rate (%)
+* Total Transactions
+* High-Risk Transactions
+* Average Fraud Probability
+* Estimated Savings
+* Fraud Detection Rate
+* ROI Metrics
+
+---
+
+## Interactive Visualizations
+
+More than 10 interactive charts are available.
+
+| Chart                       | Purpose                                  |
+| --------------------------- | ---------------------------------------- |
+| Risk Distribution Pie       | High, Medium, and Low risk breakdown     |
+| Fraud Probability Histogram | Probability distribution with thresholds |
+| Decision Breakdown Bar      | Approve, Review, and Block counts        |
+| Financial Impact Bar        | Savings by decision type                 |
+| Hourly Risk Line            | Fraud trends by hour                     |
+| Daily Risk Bar              | Fraud patterns by day                    |
+| Geographic Risk Chart       | Risk by region                           |
+| Transaction Type Analysis   | Risk by payment method                   |
+| Correlation Heatmap         | Feature relationships                    |
+| Top 20 Risk Transactions    | High-risk watchlist                      |
+
+---
+
+## Dashboard Filters
+
+### Available Filters
+
+* Risk Level
+* Transaction Type
+* Geographic Region
+
+### Planned Features
+
+* Date Range Filtering
+* Custom Saved Views
+* Advanced Search
+
+---
+
+# 🛠️ Technology Stack
+
+## Frontend Technologies
+
+| Technology | Version | Purpose                     |
+| ---------- | ------- | --------------------------- |
+| Streamlit  | 1.35.0  | Web application framework   |
+| Plotly     | 5.22.0  | Interactive visualizations  |
+| Matplotlib | 3.8.0   | PDF-ready charts            |
+| Seaborn    | 0.13.0  | Statistical visualizations  |
+| Custom CSS | -       | Enterprise-grade UI styling |
+
+---
+
+## Backend Technologies
+
+| Technology | Version | Purpose                   |
+| ---------- | ------- | ------------------------- |
+| Python     | 3.12    | Core programming language |
+| Pandas     | 2.2.2   | Data manipulation         |
+| NumPy      | 1.26.4  | Numerical computing       |
+
+---
+
+## Machine Learning Stack
+
+| Technology   | Version | Purpose                           |
+| ------------ | ------- | --------------------------------- |
+| XGBoost      | 2.0.3   | Primary fraud detection model     |
+| Scikit-Learn | 1.5.0   | Baseline models and preprocessing |
+| SHAP         | 0.45.0  | Explainable AI                    |
+| Joblib       | 1.4.2   | Model serialization               |
+
+---
+
+## Data Validation
+
+| Technology              | Version | Purpose                   |
+| ----------------------- | ------- | ------------------------- |
+| Pandera                 | 0.19.3  | Schema validation         |
+| Custom Validation Rules | -       | 40+ business logic checks |
+
+---
+
+## Monitoring & Analytics
+
+| Technology | Version | Purpose               |
+| ---------- | ------- | --------------------- |
+| Evidently  | 0.4.23  | Data drift monitoring |
+| SciPy      | Latest  | Statistical testing   |
+
+---
+
+## Reporting
+
+| Technology | Version | Purpose                  |
+| ---------- | ------- | ------------------------ |
+| ReportLab  | 4.2.0   | PDF report generation    |
+| Plotly     | 5.22.0  | Interactive HTML reports |
+
+---
+
+## Data Ingestion & Integration
+
+| Technology | Version | Purpose                    |
+| ---------- | ------- | -------------------------- |
+| Requests   | 2.31.0  | URL-based data retrieval   |
+| KaggleHub  | 0.1.0   | Kaggle dataset integration |
+| Boto3      | 1.34.0  | AWS S3 connectivity        |
+| OpenPyXL   | 3.1.2   | Excel file support         |
+
+---
+
+## Development & Deployment
+
+| Technology      | Purpose                 |
+| --------------- | ----------------------- |
+| Git             | Version control         |
+| GitHub          | Repository hosting      |
+| Streamlit Cloud | Application deployment  |
+| VS Code         | Development environment |
+
+---
+
+# 🚀 Enterprise Capabilities
+
+* Cost-Aware Fraud Decisioning
+* Explainable AI with SHAP
+* Self-Healing Data Validation
+* Drift Monitoring & Alerts
+* A/B Testing Framework
+* Executive Reporting
+* Multi-Source Data Ingestion
+* Real-Time Analytics
+* Enterprise Dashboard
+* Production-Ready Architecture
+
+
 
 
 
