@@ -1524,6 +1524,295 @@ The project structure follows enterprise software engineering best practices:
 * Explainable AI Integration
 * Business-Oriented Decision Intelligence
 
+# 🚀 Installation & Setup
+
+## Prerequisites
+
+Before running FinGuard AI, ensure you have the following installed:
+
+* Python 3.12 or higher
+* Git (for repository cloning)
+* Virtual Environment (recommended)
+
+---
+
+# Step 1: Clone the Repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/FinGuard-AI.git
+cd FinGuard-AI
+```
+
+---
+
+# Step 2: Create a Virtual Environment
+
+## Windows
+
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+## macOS / Linux
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+---
+
+# Step 3: Install Dependencies
+
+Install all required Python packages using:
+
+```bash
+pip install -r requirements.txt
+```
+
+This command installs:
+
+* Streamlit
+* XGBoost
+* Scikit-learn
+* SHAP
+* Pandas
+* NumPy
+* Plotly
+* Evidently
+* ReportLab
+* And all other project dependencies
+
+---
+
+# Step 4: Train the Models
+
+Run the training pipeline:
+
+```bash
+python train.py
+```
+
+---
+
+## What Happens During Training?
+
+The training process performs the following steps:
+
+### 📂 Data Loading
+
+* Loads 20,000 labeled fraud transactions
+* Loads 20,000 legitimate transactions
+* Combines datasets into a unified training set
+
+### 🔧 Data Preprocessing
+
+* Missing value handling
+* Feature scaling
+* Label encoding
+* Feature engineering
+* Train-test split
+
+### 🤖 Model Training
+
+* Train Logistic Regression (Baseline Model)
+* Train XGBoost (Production Model)
+
+### 🎯 Threshold Optimization
+
+* Optimize fraud detection thresholds
+* Configure business decision boundaries
+* Save cost-aware parameters
+
+### 💾 Artifact Generation
+
+The following artifacts are stored in the `models/` directory:
+
+* `xgb_model.pkl`
+* `logistic_model.pkl`
+* `scaler.pkl`
+* `encoder.pkl`
+* `feature_schema.json`
+* `threshold_config.json`
+* `data_hash.txt`
+
+---
+
+## Expected Output
+
+```text id="pn0m9t"
+🚀 Starting FinGuard AI Training Pipeline
+============================================================
+
+📂 Loading training data...
+
+   ✅ Loaded fraud dataset: 20000 rows, 24 columns
+   ✅ Loaded non-fraud dataset: 20000 rows, 23 columns
+   ✅ Combined dataset: 40000 rows, 24 columns
+
+   📊 Class distribution:
+      Legitimate: 39923 (99.81%)
+      Fraudulent: 77 (0.19%)
+
+🔧 Preprocessing data...
+
+   ✅ Training set: 32000 rows
+   ✅ Test set: 8000 rows
+
+📊 Training Logistic Regression...
+
+   ✅ Logistic Regression trained
+   ✅ Accuracy: 0.7606
+
+🚀 Training XGBoost...
+
+   ✅ XGBoost trained
+   ✅ Accuracy: 0.9969
+
+💾 Saving artifacts...
+
+   ✅ Models saved to models/
+
+✅ Training completed successfully!
+```
+
+---
+
+# Step 5: Run the Application
+
+Launch the Streamlit application:
+
+```bash
+streamlit run app.py
+```
+
+---
+
+## Application Access
+
+After startup, Streamlit will automatically open the application in your browser.
+
+### Local URL
+
+```text id="c7m45o"
+http://localhost:8501
+```
+
+---
+
+## Available Pages
+
+The application includes 9 fully functional enterprise-grade pages:
+
+1. 🏠 Home Dashboard
+2. 📤 Data Upload Center
+3. 🔍 Data Validation Engine
+4. 🤖 Fraud Detection Engine
+5. ⚖️ Decision Intelligence
+6. 🧠 Explainable AI (SHAP)
+7. 📉 Drift Monitor
+8. 🔬 A/B Testing Framework
+9. 📊 Analytics Dashboard
+
+---
+
+# Verify Installation
+
+Once the application starts successfully, you should be able to:
+
+✅ Upload transaction datasets
+
+✅ Run fraud detection models
+
+✅ View SHAP explanations
+
+✅ Generate PDF reports
+
+✅ Monitor data drift
+
+✅ Perform A/B testing
+
+✅ Explore analytics dashboards
+
+---
+
+# Troubleshooting
+
+## Virtual Environment Not Activated
+
+Verify activation:
+
+```bash
+which python
+```
+
+or on Windows:
+
+```bash
+where python
+```
+
+---
+
+## Missing Dependencies
+
+Reinstall dependencies:
+
+```bash
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+---
+
+## Streamlit Not Found
+
+Install Streamlit manually:
+
+```bash
+pip install streamlit
+```
+
+---
+
+## Model Files Missing
+
+Retrain the models:
+
+```bash
+python train.py
+```
+
+This will regenerate all required artifacts in the `models/` directory.
+
+---
+
+# Quick Start
+
+For experienced users:
+
+```bash
+git clone https://github.com/YOUR_USERNAME/FinGuard-AI.git
+
+cd FinGuard-AI
+
+python -m venv venv
+
+# Windows
+venv\Scripts\activate
+
+# macOS/Linux
+source venv/bin/activate
+
+pip install -r requirements.txt
+
+python train.py
+
+streamlit run app.py
+```
+
+🚀 FinGuard AI is now ready for fraud detection, explainable AI analysis, and enterprise-grade decision intelligence.
 
 
 
