@@ -2310,7 +2310,7 @@ Integrated monitoring, validation, and decision intelligence features
 
 ## 📬 Contact
 
-Built by **Hassan Subhani**
+**Email hassansubhani822@gmail.com**
 
 For feedback, suggestions, collaboration opportunities, or project discussions, please connect through your preferred professional channels.
 
