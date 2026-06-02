@@ -2274,6 +2274,45 @@ FinGuard AI combines:
 
 to deliver a complete enterprise-grade fraud detection platform that is scalable, explainable, and business-focused.
 
+## 👥 Contributors
+
+This project was designed and developed as a complete end-to-end fraud detection platform, combining machine learning, explainable AI, cost-aware decision intelligence, and enterprise-grade analytics.
+
+## 🚀 Project Lead
+Hassan Subhani
+
+**Role**
+
+Creator & Lead Developer
+
+**Responsibilities**
+
+Full-Stack Application Development
+Machine Learning Model Development
+Fraud Detection System Design
+XGBoost & Logistic Regression Implementation
+SHAP Explainability Integration
+Cost-Aware Decision Intelligence Development
+Data Validation Framework Design
+Data Drift Monitoring Implementation
+A/B Testing Framework Development
+PDF Reporting System Development
+Dashboard & Analytics Development
+System Architecture & Technical Design
+Deployment & Infrastructure Setup
+Contribution Summary
+Designed the complete FinGuard AI architecture
+Built all 9 application modules
+Developed the hybrid training/inference pipeline
+Implemented fraud detection and explainability workflows
+Created enterprise-grade reporting and analytics systems
+Integrated monitoring, validation, and decision intelligence features
+
+## 📬 Contact
+
+Built by **Hassan Subhani**
+
+For feedback, suggestions, collaboration opportunities, or project discussions, please connect through your preferred professional channels.
 
 
 
