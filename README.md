@@ -1484,20 +1484,6 @@ Contains reusable helper modules used across the platform.
 | `pdf_report_generator.py` | Premium executive-level reports                    |
 | `workflow_guidance.py`    | Intelligent workflow recommendations               |
 
----
-
-## 📈 Dashboards Directory
-
-Reserved for future modular dashboard components.
-
-Potential additions:
-
-* Reusable widgets
-* Dashboard templates
-* KPI components
-* Chart libraries
-
----
 
 ## 📑 Reports Directory
 
@@ -1523,28 +1509,6 @@ Stores generated reports and exported outputs.
 * JSON exports
 * Decision logs
 
----
-
-## 🧪 Tests Directory
-
-Contains automated testing suites.
-
-### Testing Coverage
-
-* Unit tests
-* Integration tests
-* Pipeline validation tests
-* Model evaluation tests
-* UI component tests
-
-### Purpose
-
-* Ensure reliability
-* Prevent regressions
-* Validate business logic
-* Maintain production quality
-
----
 
 # 🏗️ Architecture Principles
 
