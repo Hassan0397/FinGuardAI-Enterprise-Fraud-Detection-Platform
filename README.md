@@ -567,7 +567,6 @@ Four animated KPI cards displaying:
 | Metric            | Value      |
 | ----------------- | ---------- |
 | Accuracy          | 99.7%      |
-| Savings Generated | $1.2M      |
 | Inference Speed   | < 100 ms   |
 | Explainability    | SHAP-Based |
 
