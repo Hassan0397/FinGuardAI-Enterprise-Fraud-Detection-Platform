@@ -60,3 +60,9 @@ When a legitimate transaction is incorrectly blocked:
 Traditional fraud detection systems are designed to maximize prediction accuracy.
 
 However, in real-world financial operations, the objective is not simply accuracy—it is **minimizing financial loss while maximizing business value**.
+
+# 💡 Solution Architecture
+
+## The Core Innovation
+
+FinGuard AI introduces a three-layer decision intelligence system:
