@@ -326,4 +326,219 @@ Visualize results and generate reports
 * **Enterprise-Ready Design** suitable for real-world deployment.
 * **Modular Architecture** enabling easy maintenance and future enhancements.
 
+# ✨ Key Features
+
+FinGuard AI is designed as an enterprise-grade fraud detection platform that combines machine learning, explainable AI, automated validation, and business intelligence into a single solution.
+
+---
+
+## 1. 💰 Cost-Aware Decision Intelligence (Unique)
+
+Unlike traditional fraud detection systems that optimize solely for model accuracy, FinGuard AI optimizes for **financial impact and business value**.
+
+### Features
+
+* Optimizes decisions based on expected financial outcomes
+* Configurable cost parameters
+
+  * False Negative Cost: **$1,000**
+  * False Positive Cost: **$50**
+* Real-time ROI calculation
+* Dynamic threshold adjustment
+* Cost-sensitive fraud decisioning
+* Business-driven risk optimization
+
+### Benefits
+
+* Reduces financial losses
+* Improves operational efficiency
+* Maximizes return on investment (ROI)
+* Aligns model predictions with business objectives
+
+---
+
+## 2. 🔧 Self-Healing Validation Engine (Patent Pending)
+
+A robust data quality framework that automatically detects and fixes data issues before inference.
+
+### Features
+
+* 40+ automated data correction rules
+* Intelligent column mapping
+* Confidence scoring for mappings
+* Business logic validation
+* Cross-column relationship validation
+* Schema verification
+* Missing value handling
+* Duplicate detection
+* Statistical outlier detection
+
+  * IQR Method
+  * Z-Score Analysis
+
+### Benefits
+
+* Reduces manual data cleaning effort
+* Prevents prediction failures
+* Improves model reliability
+* Enhances data quality
+
+---
+
+## 3. 🧠 Real SHAP Explainability
+
+Provides transparent and interpretable AI decisions for every fraud prediction.
+
+### Features
+
+* SHAP TreeExplainer for XGBoost
+* Transaction-level explanations
+* Waterfall plots for individual predictions
+* Interactive force visualizations
+* Natural language explanations
+* Feature importance rankings
+* Local and global interpretability
+
+### Benefits
+
+* Improves trust in AI decisions
+* Supports regulatory compliance
+* Enables root-cause analysis
+* Enhances model transparency
+
+---
+
+## 4. 🌐 Multi-Source Data Ingestion
+
+Supports data collection from multiple enterprise and public sources.
+
+### Supported Sources
+
+* CSV files
+* Excel spreadsheets
+* JSON files
+* HTTP/HTTPS URLs
+* GitHub repositories
+* Google Drive links
+* Kaggle datasets
+* AWS S3 buckets
+* ZIP archives
+
+### Benefits
+
+* Flexible data integration
+* Faster onboarding
+* Reduced manual data transfer
+* Enterprise-ready connectivity
+
+---
+
+## 5. 📊 Comprehensive Monitoring
+
+Continuously monitors model performance and data quality.
+
+### Features
+
+* Data drift detection
+* Population Stability Index (PSI)
+* Kolmogorov-Smirnov (KS) testing
+* Feature-level drift analysis
+* Model performance tracking
+* Trend monitoring
+* Automated retraining recommendations
+
+### Benefits
+
+* Early detection of model degradation
+* Improved long-term performance
+* Reduced operational risk
+* Continuous model health monitoring
+
+---
+
+## 6. 🧪 A/B Testing Framework
+
+Evaluate and compare multiple fraud detection strategies using statistical testing.
+
+### Features
+
+* Statistical significance testing
+* P-value calculation
+* 95% confidence intervals
+* Lift analysis
+* Multi-metric comparison
+* Weighted scoring methodology
+* Automated winner selection
+
+### Benefits
+
+* Data-driven experimentation
+* Safer model deployment
+* Better business outcomes
+* Continuous optimization
+
+---
+
+## 7. 📄 Professional Reporting
+
+Generate executive-level reports suitable for business stakeholders and management teams.
+
+### Features
+
+* Investment-bank quality PDF reports
+* Interactive HTML reports
+* JSON export support
+* Executive summaries
+* ROI analysis and insights
+* Automated report generation
+* Personalized branding
+
+### Benefits
+
+* Faster decision-making
+* Executive-friendly reporting
+* Easy stakeholder communication
+* Audit-ready documentation
+
+---
+
+## 8. 📈 Enterprise Dashboard
+
+A modern analytics dashboard built for real-time fraud monitoring and investigation.
+
+### Features
+
+* 9 fully functional dashboard pages
+* Real-time visualizations using Plotly
+* Interactive charts and graphs
+* Filtering and sorting capabilities
+* Transaction search functionality
+* Risk-level segmentation
+* Fraud trend analysis
+* KPI monitoring
+* Drill-down analytics
+
+### Benefits
+
+* Improved analyst productivity
+* Better fraud visibility
+* Real-time decision support
+* Enterprise-grade user experience
+
+---
+
+# 🚀 Platform Highlights
+
+* Cost-Optimized Fraud Detection
+* Explainable AI with SHAP
+* Self-Healing Data Validation
+* Multi-Source Data Integration
+* Automated Drift Monitoring
+* A/B Testing & Experimentation
+* Executive Reporting Suite
+* Enterprise Dashboard Analytics
+* Production-Ready Architecture
+* Scalable and Modular Design
+
+
 
