@@ -66,3 +66,44 @@ However, in real-world financial operations, the objective is not simply accurac
 ## The Core Innovation
 
 FinGuard AI introduces a three-layer decision intelligence system:
+
+---
+
+### LAYER 1: ML PREDICTION
+
+**XGBoost (Primary) + Logistic Regression (Baseline)**  
+Output: Fraud Probability Score (0.00 - 1.00)
+
+↓
+
+### LAYER 2: COST OPTIMIZATION
+
+**Cost Model:**
+
+- False Negative (Missed Fraud) = $1,000
+- False Positive (Wrong Block) = $50
+- Manual Review = $10
+
+↓
+
+### LAYER 3: BUSINESS DECISION
+
+- 0.00 - 0.44 → ✅ APPROVE (Auto-approve)
+- 0.45 - 0.84 → ⚠️ REVIEW (Manual review)
+- 0.85 - 1.00 → ❌ BLOCK (Auto-reject)
+
+---
+
+## The Hybrid Training/Inference Design
+
+**TRAINING PHASE** (Runs once OR when training data changes)
+
+Historical Data → Validation → Preprocessing → Model Training
+
+Output: `xgb_model.pkl`, `scaler.pkl`, `encoders.pkl`, `feature_schema.json`, `threshold_config.json`
+
+↓
+
+**INFERENCE PHASE** (Runs every time user uploads data)
+
+User Upload → Validation → Preprocessing → ML Prediction → Decision Engine → SHAP Explanation → Dashboard
