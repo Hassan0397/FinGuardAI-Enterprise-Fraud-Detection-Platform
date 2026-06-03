@@ -1536,10 +1536,9 @@ Before running FinGuard AI, ensure you have the following installed:
 
 ---
 
-# Step 1: Clone the Repository
+# Step 1: Goto project directory
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/FinGuard-AI.git
 cd FinGuard-AI
 ```
 
