@@ -1793,7 +1793,6 @@ This will regenerate all required artifacts in the `models/` directory.
 For experienced users:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/FinGuard-AI.git
 
 cd FinGuard-AI
 
