@@ -1,7 +1,7 @@
 # utils/shap_visualizer.py
 """
 Advanced SHAP Visualizations for Enterprise Fraud Detection
-FAANG-level interactive visualizations - FULLY FIXED VERSION
+Premium-level interactive visualizations 
 """
 
 import plotly.graph_objects as go
